@@ -1,6 +1,8 @@
+import os
 import time
+
 from api.spotify_api import get_playlist
-from api.youtube_api import o_auth_2, api_auth, get_video_ID_by_name, add_song_to_playlist
+from api.youtube_api import o_auth_2, api_auth, get_video_ID_by_name, add_song_to_playlist, MY_PLAYLIST_ID
 
 
 def main():

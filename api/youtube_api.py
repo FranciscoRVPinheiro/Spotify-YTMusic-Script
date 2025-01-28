@@ -1,6 +1,4 @@
 import os
-import time
-import json
 
 from dotenv import load_dotenv
 
@@ -74,21 +72,3 @@ def add_song_to_playlist(auth, video_id, plailist_id):
             }
         }
     ).execute()    
-
-
-# def main():
-#     songs_list = get_playlist()
-#     youtube_api_key = api_auth()
-#     youtube_oauth = o_auth_2()
-#     for song in songs_list:
-#         time.sleep(5)
-#         video_id = get_video_ID_by_name(youtube_api_key, song)
-#         if video_id:
-#             add_song_to_playlist(youtube_oauth, video_id, MY_PLAYLIST_ID)
-#             print(f'{song} - Done.')
-#         else:
-#             continue
-
-
-# if __name__ == "__main__":
-#     main()
