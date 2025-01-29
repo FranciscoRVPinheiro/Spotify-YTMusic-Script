@@ -48,8 +48,12 @@ def get_playlist():
 
     song_list = []
     for item in response_json.get("items", []):  
-        artist_name = item.get("track", {}).get("album", {}).get("artists")[0]['name']
-        song_name = item.get("track", {}).get('name') 
+        try:
+            artist_name = item.get("track", {}).get("album", {}).get("artists")[0]['name']
+            song_name = item.get("track", {}).get('name') 
+        except Exception as e:
+            print(e)
+            continue
 
         if song_name: 
             song = f"{song_name} - {artist_name}"
@@ -62,3 +66,4 @@ def get_playlist():
     return song_list
 
 
+# get_playlist()
