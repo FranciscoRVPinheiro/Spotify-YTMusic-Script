@@ -1,4 +1,10 @@
-This script transfers songs from a Spotify playlist to a YouTube playlist. Here's a step-by-step explanation of what each part does:
+This script transfers songs from a public Spotify playlist to your YouTube playlist. Here's a step-by-step explanation of what each part does:
+
+You'll need a Spotify developer account & api key: https://developer.spotify.com/documentation/web-api
+
+You'll also need a access to Youtube's api: https://developers.google.com/youtube/v3/getting-started
+
+For Youtube, you need an api key and a oauth2.0 client json, which you'll name oauth.json and paste in the root of this project.
 
 1. **Imports**: The script imports necessary modules and functions, including time for delays and various functions from
 
@@ -10,8 +16,7 @@ api.youtube_api
 
 .
 
-2. **Main Function**:
-   -
+2. ## **Main Function**:
 
 get_playlist()
 
@@ -37,8 +42,7 @@ add_song_to_playlist()
 
 . - Prints a confirmation message.
 
-3. **Helper Functions**:
-   -
+3. ## **Helper Functions**:
 
 get_playlist()
 
@@ -70,12 +74,9 @@ add_song_to_playlist()
    ```
 
 2. **Set Up API Credentials**:
+
    - **Spotify**: Ensure you have a valid Spotify API token.
-   - **YouTube**: Ensure you have a valid API key and OAuth 2.0 credentials. Save the OAuth credentials in a file named
-
-oauth.json
-
-.
+   - **YouTube**: Ensure you have a valid API key and OAuth 2.0 credentials. Save the OAuth credentials in a file named oauth.json
 
 3. **Environment Variables**:
    Ensure you have the following environment variables set:
